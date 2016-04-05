@@ -24,11 +24,13 @@ class HtmlDiffAdvanced extends \Caxy\HtmlDiff\HtmlDiff implements HtmlDiffAdvanc
   public function setOldHtml($oldText) {
     $this->oldText = $this->purifyHtml(trim($oldText));
     $this->buildRequired = TRUE;
+    $this->content = '';
   }
 
   public function setNewHtml($newText) {
     $this->newText = $this->purifyHtml(trim($newText));
     $this->buildRequired = TRUE;
+    $this->content = '';
   }
 
   public function setInsertSpaceInReplace($boolean) {
